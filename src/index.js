@@ -10,6 +10,7 @@ const download = (api, opts) => {
     const { url, data, outputPath } = opts;
     const { absOutputPath } = api.paths;
     const baseFilePath = outputPath || absOutputPath;
+    fs.ensureDirSync(baseFilePath);
     const codeFilePath = `${baseFilePath}/plugin.zip`;
     console.log('baseFilePathbaseFilePath', baseFilePath);
     console.log('开始下载插件>>>>>>>');
