@@ -7,9 +7,9 @@ const fs = require('fs-extra');
  */
 const download = (api, opts) => {
   api.onBuildSuccess(async ({ stats }) => {
-    const { url, data } = opts;
+    const { url, data, outputPath } = opts;
     const { absOutputPath } = api.paths;
-    const baseFilePath = absOutputPath;
+    const baseFilePath = outputPath || absOutputPath;
     const codeFilePath = `${baseFilePath}/plugin.zip`;
     console.log('baseFilePathbaseFilePath', baseFilePath);
     console.log('开始下载插件>>>>>>>');
