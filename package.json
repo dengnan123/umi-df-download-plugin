@@ -1,6 +1,6 @@
 {
   "name": "umi-df-load-plugin",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "dfcous 下载plugin插件",
   "main": "./src/index.js",
   "scripts": {
