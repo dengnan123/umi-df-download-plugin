@@ -11,7 +11,6 @@ function fetchPost(url, params, codeFilePath) {
         reject(err);
       })
       .on('response', function(response) {
-        console.log(response.file); // 200
       })
       .pipe(writeStream);
     writeStream.on('finish', data => {
